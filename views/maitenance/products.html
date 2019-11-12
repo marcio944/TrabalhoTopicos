@@ -1,0 +1,69 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Lista de Pedidos de Assistência Técnica
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/maitenance"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active"><a href="/maitenance/products">Assistência Técnica</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-primary">
+            
+            <!--<div class="box-header">
+              <a href="/admin/products/create" class="btn btn-success">Cadastrar Produto</a>
+            </div> -->
+
+            <div class="box-body no-padding">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th style="width:20px">#</th>
+                    <th>Nome </th>
+                    <th>E-Mail</th>
+                    <th>Telefone</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th style="width: 300px">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {loop="$maitenance"}
+                  <tr>
+                    <td>{$value.idassistance}</td>
+                    <td>{$value.desname}</td>
+                    <td>{$value.desemail}</td>
+                    <td>{$value.nrphone}</td>
+                    <td>{$value.desnameproduct}</td>
+                    <td>{$value.description}</td>
+
+                    <td>
+                      {if="$value.instatus == 0"}
+                      <a href="/maitenance/products/{$value.idname}" class="btn btn-warning-xs"><i class="fa fa-edit"></i>Responder</a>
+                      {/if}
+                      <a href="/maitenance/products/{$value.idname}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-success.xs"><i class="fa fa-trash"></i> Excluir</a>
+                    </td>
+                   
+                    </td> 
+                  </tr>
+                  {/loop}
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

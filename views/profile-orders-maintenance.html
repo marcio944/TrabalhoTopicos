@@ -1,0 +1,67 @@
+<style>
+@media print {
+    .header-area,
+    .site-branding-area,
+    .sticky-wrapper,
+    .footer-top-area,
+    .footer-bottom-area,
+    .single-product-area .col-md-3,
+    .button.alt,
+    .product-big-title-area {
+        display:none!important;
+    }
+    .single-product-area .col-md-9 {
+        width: 100%!important;
+    }
+}
+</style>
+
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Minha Conta</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">                
+            <div class="col-md-3">
+                {include="profile-menu"}
+            </div>
+            <div class="col-md-9">
+                
+                <h5 id="order_review_heading" style="margin-top:01px;">Manutenção do Produto N°{$order.idorder}</h5>
+                <div id="order_review" style="position: relative;">
+                    <form class="shop_table">
+                        <thead>
+                            <tr>
+                                <label for="exampleFormControlTextarea1">Descrição do Problema</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+                            </tr>
+                        </thead>
+                        
+
+                        <div class="form-group">
+                
+                    </div>
+                        
+                    </form>
+                    <div id="payment">
+                        <div class="form-row place-order">
+                            <input type="submit" value="Enviar" class="button alt" onclick="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
